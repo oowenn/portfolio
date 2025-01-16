@@ -1,6 +1,88 @@
+html {
+  --color-accent: oklch(65% 50% 0);
+}
+
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-  }
+  max-width: 100ch;
+  line-height: 1.5;
+  font: 100%/1.5 system-ui;
+  margin-inline: auto;
+  padding: 2ch;
+  accent-color: var(--color-accent);
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+nav ul, nav li {
+  display: contents;
+}
+
+nav li a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: auto;
+}
+
+nav li a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+}
+
+nav li a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h)  
+}
+
+/* Contact Form */
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label, button {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+}
+
+/* Projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  column-gap: 1em;
+}
+
+article {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h2 {
+  margin: 0;
+}
