@@ -148,7 +148,7 @@ h1 {
 /* education */
 
 .education section article {
-  line-height: 0;
+  line-height: 1;
 }
 
 /* Projects */
