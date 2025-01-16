@@ -150,5 +150,17 @@ h2 {
   line-height: 0;
 }
 
-/* experience */
+/* Projects */
 
+.projects {
+  display: block; /* Ensure it's a block container */
+  max-width: 100%; /* Let it take up the full width of the parent container */
+  text-align: left; /* Align content to the left */
+  margin: 0; /* Remove any centering margins */
+  padding: 1em 0; /* Optional: Add padding for spacing */
+  margin: 0;
+}
+
+.projects article {
+  margin-bottom: 1em; /* Add spacing between articles */
+}
