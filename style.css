@@ -75,36 +75,33 @@ article {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
+  line-height: 1;
   text-wrap: balance;
+  margin: 0;
 }
 
 h1 {
   font-size: 400%;
 }
 
-h2 {
-  margin: 0;
+.resume h1 {
+  font-size: 200%;
 }
 
 /* RESUME */
 
 .resume {
+  padding-top: 0.5em;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5em;
+  gap: 0;
   max-width: 100ch;
   margin: 0;
   line-height: 1;
 }
 
-.resume > div {
-  border-bottom: 2px solid black; /* Adds a solid black line below each div */
-  padding-bottom: 1em; /* Optional: Add space between content and the line */
-}
-
-.resume > div:last-child {
-  border-bottom: none; /* Remove the line from the last div */
+.resume section h2 {
+  border-bottom: 2px solid black;
 }
 
 /* separating lines */
@@ -120,8 +117,6 @@ h2 {
   text-align: right;
 }
 
-
-
 /* header */
 
 .header .contact {
@@ -129,6 +124,8 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 .header .contact span {
@@ -147,17 +144,16 @@ h2 {
 
 .education {
   margin: 0;
-  line-height: 0;
 }
 
 /* Projects */
 
 .projects {
-  display: block; /* Ensure it's a block container */
-  max-width: 100%; /* Let it take up the full width of the parent container */
-  text-align: left; /* Align content to the left */
-  margin: 0; /* Remove any centering margins */
-  padding: 1em 0; /* Optional: Add padding for spacing */
+  display: block;
+  max-width: 100%;
+  text-align: left;
+  margin: 0;
+  padding: 1em 0;
   margin: 0;
 }
 
