@@ -107,6 +107,20 @@ h2 {
   border-bottom: none; /* Remove the line from the last div */
 }
 
+/* separating lines */
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.right-side {
+  margin-left: auto;
+  text-align: right;
+}
+
+
 
 /* header */
 
@@ -134,17 +148,6 @@ h2 {
 .education {
   margin: 0;
   line-height: 0;
-}
-
-.education .line {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.education .right-side {
-  margin-left: auto;
-  text-align: right;
 }
 
 /* experience */
