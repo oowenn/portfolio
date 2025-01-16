@@ -84,10 +84,6 @@ h1 {
   font-size: 400%;
 }
 
-.resume h1 {
-  font-size: 200%;
-}
-
 /* RESUME */
 
 .resume {
@@ -100,8 +96,17 @@ h1 {
   line-height: 1;
 }
 
+.resume h1 {
+  font-size: 200%;
+}
+
 .resume section h2 {
   border-bottom: 2px solid black;
+}
+
+.resume section ul {
+  margin: 0;
+  padding-left: 2ch;
 }
 
 /* separating lines */
@@ -142,8 +147,8 @@ h1 {
 
 /* education */
 
-.education {
-  margin: 0;
+.education section article {
+  line-height: 0;
 }
 
 /* Projects */
