@@ -1,5 +1,6 @@
 html {
   --color-accent: oklch(65% 50% 0);
+  /* color-scheme: light dark; */
 }
 
 body {
@@ -14,8 +15,10 @@ body {
 /* NAVIGATION */
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid;
+  border-bottom-color: var(--border-color);
 }
 
 nav ul, nav li {
@@ -32,12 +35,13 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
+  border-bottom: 0.4em solid;
+  border-bottom-color: var(--border-color);
 }
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h)  
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 /* CONTACT FORM */
@@ -48,7 +52,7 @@ form {
   gap: 1em;
 }
 
-label, button {
+form label, form button {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
@@ -57,6 +61,10 @@ label, button {
 button {
   display: flex;
   justify-content: center;
+}
+
+input, textarea, button, label {
+  font: inherit;
 }
 
 /* PROJECTS */
@@ -164,4 +172,13 @@ h1 {
 
 .resume .projects article {
   margin-bottom: 1em; /* Add spacing between articles */
+}
+
+/* THEME */
+
+label.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
 }

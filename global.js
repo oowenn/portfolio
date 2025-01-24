@@ -4,16 +4,6 @@ function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-// const navLinks = $$("nav a");
-// let currentLink = navLinks.find(
-//     (a) => a.host === location.host && a.pathname === location.pathname
-// );
-
-// if (currentLink) {
-//     // or if (currentLink !== undefined)
-//     currentLink.classList.add('current');
-// }
-
 let pages = [
     { url: '../home/home.html', title: 'Home' },
     { url: '../projects/projects.html', title: 'Projects' },
@@ -37,6 +27,36 @@ for (let p of pages) {
     if (a.host !== location.host) {
         a.target = '_blank';
     }
-    nav.append(a);}
+    nav.append(a);
+}
 
-const ARE_WE_HOME = document.documentElement.classList.contains('home');
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+        <label class="color-scheme">
+            Theme:
+            <select>
+                <option value="light dark">Automatic</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>`
+);
+
+const select = document.querySelector('select');
+select.addEventListener('input', function (event) {
+    console.log('color scheme changed to', event.target.value);
+    document.documentElement.style.setProperty('color-scheme', event.target.value);
+    localStorage.colorScheme = event.target.value;
+    console.log(event.target.value, 'saved to localStorage');
+});
+
+function setColorScheme(colorScheme) {
+    document.documentElement.style.setProperty('color-scheme', colorScheme);
+    console.log('Theme applied:', colorScheme);}
+
+const savedColorScheme = localStorage.colorScheme;
+if (savedColorScheme) {
+    setColorScheme(savedColorScheme);
+    select.value = savedColorScheme;
+}
