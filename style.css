@@ -58,7 +58,7 @@ form label, form button {
   grid-column: 1 / -1;
 }
 
-button {
+button.send {
   display: flex;
   justify-content: center;
 }

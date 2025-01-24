@@ -2,7 +2,7 @@ console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
-}
+};
 
 let pages = [
     { url: '../home/home.html', title: 'Home' },
@@ -28,7 +28,7 @@ for (let p of pages) {
         a.target = '_blank';
     }
     nav.append(a);
-}
+};
 
 document.body.insertAdjacentHTML(
     'afterbegin',
@@ -59,4 +59,4 @@ const savedColorScheme = localStorage.colorScheme;
 if (savedColorScheme) {
     setColorScheme(savedColorScheme);
     select.value = savedColorScheme;
-}
+};
