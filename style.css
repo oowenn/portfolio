@@ -86,10 +86,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   text-wrap: balance;
   margin: 0;
+  padding: 0.5em 0;
 }
 
 h1 {
   font-size: 400%;
+}
+
+.projects-title {
+  padding: 0.5em 0;
+}
+
+.projects {
+  padding: 1em;
 }
 
 /* RESUME */
@@ -182,3 +191,4 @@ label.color-scheme {
   right: 1rem;
   font-size: 80%;
 }
+
