@@ -1,18 +1,21 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
+        "title": "Vehicle and Tire Recalls Analysis",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, magni eius ipsa perferendis voluptas at molestias, ex ad, nobis accusamus commodi autem soluta reiciendis temporibus? Quos libero doloremque quia dolorem!"
+        "description": "Analyzed NHTSA vehicle recall data to identify trends in safety issues, applied machine learning models to predict recall initiatives with 99% accuracy, and evaluated manufacturer compliance using statistical analysis and data visualization."
     },
     {
-        "title": "Natus consequatur porro atque.",
+        "title": "Credit Card Fraud Analysis",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Accusamus quidem sed consequatur, alias quas non tenetur hic? Non soluta voluptates dolores doloribus atque veritatis asperiores. Amet possimus deserunt minima fugit iste voluptatem numquam, eum sed iure architecto atque."
+        "description": "Developed and deployed a credit card fraud detection model, leveraging data cleaning, feature engineering, and statistical modeling to enhance recall by 89% and improve fraud prediction efficiency."
     },
     {
-        "title": "Error debitis blanditiis labore!",
+        "title": "2022 League of Legends Match Data Analysis",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Debitis alias, non laborum sunt ipsum quasi cupiditate expedita tempora dolorem, aliquid illo numquam dignissimos unde. Libero voluptas necessitatibus ratione eaque nulla praesentium esse, possimus accusantium ipsa nobis? Aspernatur, nihil."
+        "description": "Analyzed the 2022 League of Legends match dataset, exploring key performance metrics across regional leagues, and trained a RandomForestClassifier with optimized hyperparameters to predict match outcomes with 96% accuracy."
     },
     {
         "title": "Est aliquid quis et?",
