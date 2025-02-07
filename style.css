@@ -258,15 +258,24 @@ label.color-scheme {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 10px; /* Adds spacing between legend items */
-  padding: 0;
+  padding: 12px;
   list-style: none; /* Removes default bullet points */
   border: 1px solid #ccc;  /* Adds a light gray border */
   padding: 10px;  /* Adds padding inside the border */
-  margin: auto; /* Centers the legend */
+  margin: 16px 0; /* Centers the legend */
+  background-color: transparent;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .legend-item {
   display: flex; /* Aligns swatch and text horizontally */
   align-items: center; /* Vertically centers swatch and text */
   gap: 5px; /* Adds space between swatch and text */
+}
+
+.container {
+  display: flex;  /* Arrange pie chart and legend in a row */
+  align-items: center;  /* Center content horizontally */
+  gap: 20px;  /* Add space between pie chart and legend */
 }
