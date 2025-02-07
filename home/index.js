@@ -21,4 +21,4 @@ if (profileStats) {
             <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
           </dl>
       `;
-  }
+}

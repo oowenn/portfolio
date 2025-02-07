@@ -234,3 +234,12 @@ label.color-scheme {
   grid-row: 2;
   text-align: left;
 }
+
+/* LAB 5 */
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
