@@ -279,3 +279,22 @@ label.color-scheme {
   align-items: center;  /* Center content horizontally */
   gap: 20px;  /* Add space between pie chart and legend */
 }
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}

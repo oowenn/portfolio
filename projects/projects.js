@@ -33,24 +33,47 @@ function renderPieChart(projectsGiven) {
     let newArcData = newSliceGenerator(newData);
     let newArcs = newArcData.map((d) => arcGenerator(d));
 
-    // clear up the previous chart and legend
-    d3.select('svg').selectAll('path').remove();
-    d3.select('.legend').selectAll('li').remove();
+    let selectedIndex = -1;
+    let svg = d3.select('svg');
+    let legend = d3.select('.legend');
+    let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-    //  render the new chart and legend
+    // clear up the previous chart and legend
+    svg.selectAll('path').remove();
+    legend.selectAll('li').remove();
+
+    //  render the new chart and legend    
     newArcs.forEach((arc, idx) => {
-        d3.select('svg')
+        svg
           .append('path')
           .attr('d', arc)
-          .attr('fill', colors(idx));
+          .attr('fill', colors(idx))
+          .on('click', () => {
+            selectedIndex = selectedIndex === idx ? -1 : idx;
+            // console.log('selected index:', selectedIndex);
+            svg
+                .selectAll('path')
+                .attr('class', (_, idx) => (
+                    idx === selectedIndex ? 'selected' : ''
+                ));
+            legend
+                .selectAll('li')
+                .attr('class', (_, idx) => (
+                    idx === selectedIndex ? 'selected' : ''
+                ));
+        });
     });
+
+
     newData.forEach((d, idx) => {
         legend.append('li')
             .attr('class', 'legend-item')
             .attr('style', `--color:${colors(idx)}`)
             .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
     });
+
 }
+
 
 renderPieChart(projects);
 
@@ -69,3 +92,24 @@ searchInput.addEventListener('input', (event) => {
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
 });
+
+/*
+function embedArcClick(arcsGiven, projectsGiven, dataGiven) {
+    d3.select("#pie-chart").selectAll("path").remove();
+
+    for (let i = 0; i < arcsGiven.length; i++) {
+        let path = document.createElementNS(svgNS, "path");
+        path.setAttribute("d", arcsGiven[i]);
+        path.setAttribute("fill", colors(i));
+// listen for clicks
+        path.addEventListener("click", () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+
+        document.querySelectorAll("path").forEach((p, idx) => {
+            if (idx === selectedIndex) {
+            p.classList.add("selected");
+            } else {
+            p.classList.remove("selected");
+            }
+        });
+*/
