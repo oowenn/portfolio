@@ -51,6 +51,17 @@ function renderPieChart(projectsGiven) {
           .on('click', () => {
             selectedIndex = selectedIndex === idx ? -1 : idx;
             // console.log('selected index:', selectedIndex);
+
+            if (selectedIndex === -1) {
+                renderProjects(projects, projectsContainer, 'h2');
+              } else {
+                let selectedYear = newData[selectedIndex].label;
+                let filteredProjects = projects.filter(
+                    (project) => project.year === selectedYear
+                );
+                renderProjects(filteredProjects, projectsContainer, 'h2');
+            }
+
             svg
                 .selectAll('path')
                 .attr('class', (_, idx) => (
@@ -61,6 +72,8 @@ function renderPieChart(projectsGiven) {
                 .attr('class', (_, idx) => (
                     idx === selectedIndex ? 'selected' : ''
                 ));
+
+            
         });
     });
 
@@ -92,24 +105,3 @@ searchInput.addEventListener('input', (event) => {
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects);
 });
-
-/*
-function embedArcClick(arcsGiven, projectsGiven, dataGiven) {
-    d3.select("#pie-chart").selectAll("path").remove();
-
-    for (let i = 0; i < arcsGiven.length; i++) {
-        let path = document.createElementNS(svgNS, "path");
-        path.setAttribute("d", arcsGiven[i]);
-        path.setAttribute("fill", colors(i));
-// listen for clicks
-        path.addEventListener("click", () => {
-        selectedIndex = selectedIndex === i ? -1 : i;
-
-        document.querySelectorAll("path").forEach((p, idx) => {
-            if (idx === selectedIndex) {
-            p.classList.add("selected");
-            } else {
-            p.classList.remove("selected");
-            }
-        });
-*/
