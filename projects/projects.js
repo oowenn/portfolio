@@ -56,7 +56,7 @@ function renderPieChart(projectsGiven) {
                 renderProjects(projects, projectsContainer, 'h2');
               } else {
                 let selectedYear = newData[selectedIndex].label;
-                let filteredProjects = projects.filter(
+                let filteredProjects = projectsGiven.filter(
                     (project) => project.year === selectedYear
                 );
                 renderProjects(filteredProjects, projectsContainer, 'h2');
@@ -76,7 +76,6 @@ function renderPieChart(projectsGiven) {
             
         });
     });
-
 
     newData.forEach((d, idx) => {
         legend.append('li')
