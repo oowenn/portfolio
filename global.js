@@ -5,10 +5,10 @@ function $$(selector, context = document) {
 };
 
 let pages = [
-    { url: '../home/home.html', title: 'Home' },
-    { url: '../projects/projects.html', title: 'Projects' },
-    { url: '../contact/contact.html', title: 'Contact' },
-    { url: '../CV/cv.html', title: 'CV' },
+    { url: '../index.html', title: 'Home' },
+    { url: '../projects/index.html', title: 'Projects' },
+    { url: '../contact/index.html', title: 'Contact' },
+    { url: '../resume/index.html', title: 'CV' },
     { url: 'https://github.com/oowenn/portfolio', title: 'GitHub' }
   ];
 
@@ -17,6 +17,10 @@ document.body.prepend(nav);
 
 for (let p of pages) {
     let url = p.url;
+    if (location.pathname === '/index.html') {
+        console.log('index.html');
+        url = url.replace('../', '');
+    }
     let title = p.title;
     let a = document.createElement('a');
     a.href = url;

@@ -16,9 +16,6 @@ if (projectsTitle) {
 let arcGenerator = d3.arc()
     .innerRadius(0)
     .outerRadius(50);
-let colors = d3.scaleOrdinal(d3.schemeTableau10);
-let legend = d3.select('.legend');
-
 
 function renderPieChart(projectsGiven) {
     let newRolledData = d3.rollups(
@@ -72,7 +69,6 @@ function renderPieChart(projectsGiven) {
                 .attr('class', (_, idx) => (
                     idx === selectedIndex ? 'selected' : ''
                 ));
-
             
         });
     });
