@@ -5,22 +5,25 @@ function $$(selector, context = document) {
 };
 
 let pages = [
-    { url: '../index.html', title: 'Home' },
-    { url: '../projects/index.html', title: 'Projects' },
-    { url: '../contact/index.html', title: 'Contact' },
-    { url: '../resume/index.html', title: 'CV' },
-    { url: '../meta/index.html', title: 'Meta' },
+    { url: 'index.html', title: 'Home' },
+    { url: 'projects/index.html', title: 'Projects' },
+    { url: 'contact/index.html', title: 'Contact' },
+    { url: 'resume/index.html', title: 'CV' },
+    { url: 'meta/index.html', title: 'Meta' },
     { url: 'https://github.com/oowenn/portfolio', title: 'GitHub' }
   ];
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
+const ARE_WE_HOME = document.documentElement.classList.contains('home');
+
 
 for (let p of pages) {
     let url = p.url;
-    if (location.pathname.endsWith('portfolio/index.html')) {
-        url = url.replace('../', '');
-    }
+    if (!ARE_WE_HOME && !url.startsWith('http')) {
+        url = '../' + url;
+      }
+
     let title = p.title;
     let a = document.createElement('a');
     a.href = url;
