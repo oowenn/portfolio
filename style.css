@@ -402,3 +402,46 @@ circle:hover {
   font-size: 14px;
   color: black;
 }
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+#language-breakdown {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  gap: 3em; /* Adds spacing between columns */
+  margin-top: 1em;
+}
+
+#language-breakdown dt {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#language-breakdown dd {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+
+#language-breakdown dd:last-of-type {
+  font-size: 1.2em;
+  color: gray;
+}
