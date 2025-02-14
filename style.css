@@ -422,26 +422,19 @@ circle.selected {
 }
 
 #language-breakdown {
-  display: flex;
-  justify-content: center; /* Centers items horizontally */
-  gap: 3em; /* Adds spacing between columns */
-  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 0.5em;
+  text-align: center;
 }
 
 #language-breakdown dt {
   font-size: 1.2em;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 0.5em;
+  grid-row: 1; /* Ensures all dt elements stay in the first row */
 }
 
 #language-breakdown dd {
-  font-size: 1.8em;
-  text-align: center;
-  margin-bottom: 0.3em;
-}
-
-#language-breakdown dd:last-of-type {
   font-size: 1.2em;
-  color: gray;
+  grid-row: 2; /* Ensures all dd elements stay in the second row */
 }
