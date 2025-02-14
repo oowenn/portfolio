@@ -307,3 +307,5 @@ function updateTooltipContent(commit) {
   
     return breakdown;
   }
+
+console.log('update check 1');
