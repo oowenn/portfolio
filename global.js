@@ -17,8 +17,7 @@ document.body.prepend(nav);
 
 for (let p of pages) {
     let url = p.url;
-    if (location.pathname === '/index.html') {
-        console.log('index.html');
+    if (location.pathname.endsWith('portfolio/index.html')) {
         url = url.replace('../', '');
     }
     let title = p.title;
