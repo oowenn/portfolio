@@ -307,5 +307,3 @@ function updateTooltipContent(commit) {
   
     return breakdown;
   }
-
-console.log('main.js loaded');
