@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Vehicle and Tire Recalls Analysis",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed NHTSA vehicle recall data to identify trends in safety issues, applied machine learning models to predict recall initiatives with 99% accuracy, and evaluated manufacturer compliance using statistical analysis and data visualization."
+    },
+    {
+        "title": "Credit Card Fraud Analysis",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed and deployed a credit card fraud detection model, leveraging data cleaning, feature engineering, and statistical modeling to enhance recall by 89% and improve fraud prediction efficiency."
+    },
+    {
+        "title": "2022 League of Legends Match Data Analysis",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed the 2022 League of Legends match dataset, exploring key performance metrics across regional leagues, and trained a RandomForestClassifier with optimized hyperparameters to predict match outcomes with 96% accuracy."
+    },
+    {
+        "title": "Est aliquid quis et?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Eos veritatis facere earum, odit ipsum, aspernatur perspiciatis ipsa sit, culpa totam repudiandae ipsam incidunt. Possimus debitis ullam libero magni dignissimos, rem et laborum explicabo iure veritatis quisquam repellat nulla?",
+        "year": 2023
+    },
+    {
+        "title": "Dolorem pariatur ea libero!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Laudantium et nulla, unde asperiores cupiditate qui minus quod repudiandae, error quos temporibus suscipit sapiente! Asperiores tempore distinctio perferendis? Modi omnis eum sapiente! Aperiam nobis debitis doloribus id maiores numquam.",
+        "year": 2023
+    },
+    {
+        "title": "Non doloremque natus quisquam?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Iusto autem repudiandae odit labore, veniam, nisi praesentium aliquam illo exercitationem quisquam maiores delectus laudantium ipsum quas cum culpa sit assumenda dolorem aspernatur architecto eos earum at fugiat deleniti. Fugiat!",
+        "year": 2023
+    },
+    {
+        "title": "Obcaecati omnis beatae labore.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Sequi ea veniam incidunt eveniet, adipisci quasi accusantium quia vitae tempore dolores. Alias dolores nemo praesentium. Itaque laudantium minima recusandae unde, dolores velit atque amet blanditiis aut consectetur reiciendis. Saepe?",
+        "year": 2023
+    },
+    {
+        "title": "Et reprehenderit accusamus quasi?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aperiam necessitatibus praesentium quod inventore, veritatis iure facere a soluta repudiandae! Culpa officiis omnis rem tenetur deserunt beatae at expedita? Doloremque, atque voluptate ipsum iure laboriosam harum sed optio doloribus.",
+        "year": 2022
+    },
+    {
+        "title": "Quis laborum a cumque.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Necessitatibus aut dolor cum facilis totam laboriosam exercitationem porro, quas minima sint pariatur magnam aperiam incidunt consequuntur in aspernatur alias accusantium, laudantium repellendus officiis suscipit quos debitis, doloremque delectus. Aspernatur.",
+        "year": 2022
+    },
+    {
+        "title": "Accusantium quo amet earum.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Voluptatibus, enim omnis optio officiis culpa pariatur consequatur est. Sint blanditiis doloribus amet, fuga, expedita nemo similique deserunt quos excepturi fugit corporis voluptatibus! Tempore ratione rem mollitia ea aut beatae?",
+        "year": 2022
+    },
+    {
+        "title": "Quia quisquam quibusdam deleniti.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Placeat esse at, veritatis doloremque iusto eum blanditiis officia ipsum error voluptatem in commodi quae repellat. Doloremque rem ad, sapiente officiis similique, veritatis veniam, natus tenetur excepturi reprehenderit commodi! At.",
+        "year": 2022
+    },
+    {
+        "title": "Vero perferendis assumenda repudiandae?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Quia fuga maiores magnam cupiditate culpa porro iusto. Reprehenderit doloribus in impedit magni commodi distinctio sed corporis architecto fugit voluptatem assumenda debitis consectetur sit animi earum soluta, exercitationem delectus unde!",
+        "year": 2021
+    }
+]
