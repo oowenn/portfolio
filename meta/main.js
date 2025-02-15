@@ -13,7 +13,7 @@ function processCommits() {
         let { author, date, time, timezone, datetime } = first;
         let ret = {
           id: commit,
-          url: 'https://github.com/vis-society/lab-7/commit/' + commit,
+          url: 'https://github.com/oowenn/portfolio/commit/' + commit,
           author,
           date,
           time,
