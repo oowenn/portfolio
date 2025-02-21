@@ -69,6 +69,10 @@ input, textarea, button, label {
 
 /* PROJECTS */
 
+a:visited {
+  color: inherit;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -95,6 +99,14 @@ h1 {
 
 .projects-title {
   padding: 0.5em 0;
+}
+
+.project-image {
+  width: 100%; /* Ensures image takes full width of its container */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 200px; /* Adjust based on the desired height */
+  object-fit: cover; /* Ensures the image fits within the dimensions while maintaining proportions */
+  border-radius: 8px; /* Optional: Adds rounded corners for a polished look */
 }
 
 .projects {

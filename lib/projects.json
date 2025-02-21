@@ -1,5 +1,12 @@
 [
     {
+        "title": "Bike Watching in Boston",
+        "year": 2025,
+        "image": "../images/bikewatching.png",
+        "description": "Visualizes bicycle traffic across Boston through an interactive map that highlights bike routes and station data. It features a time-filtering option, allowing users to view variations in bike traffic at different times of the day. This visualization tool aids urban planners, cyclists, and city officials in understanding traffic patterns and planning improvements to the bike network infrastructure.",
+        "url": "https://oowenn.github.io/bikewatching/"
+    },    
+    {
         "title": "Vehicle and Tire Recalls Analysis",
         "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
