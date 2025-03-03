@@ -2,6 +2,8 @@ let data = [];
 
 let commits = d3.groups(data, (d) => d.commit);
 
+let selectedCommits = [];
+
 updateTooltipVisibility(false);
 
 
@@ -141,12 +143,14 @@ function createScatterplot() {
       .style('fill-opacity', 0.7) // Add transparency for overlapping dots
       .on('mouseenter', (event, commit) => {
         d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
+        d3.select(event.currentTarget).classed('selected', isCommitSelected(commit)); // give it a corresponding boolean value
         updateTooltipContent(commit);
         updateTooltipVisibility(true);
         updateTooltipPosition(event);
       })
-      .on('mouseleave', () => {
+      .on('mouseleave', (event, commit) => {
         d3.select(event.currentTarget).style('fill-opacity', 0.7); // Restore transparency
+        d3.select(event.currentTarget).classed('selected', isCommitSelected(commit)); // give it a corresponding boolean value
         updateTooltipContent({}); // Clear tooltip content
         updateTooltipVisibility(false);
       });    
@@ -235,23 +239,23 @@ function updateTooltipContent(commit) {
 
   function brushed(event) {
     brushSelection = event.selection;
+    selectedCommits = !brushSelection
+      ? []
+      : commits.filter((commit) => {
+          let min = { x: brushSelection[0][0], y: brushSelection[0][1] };
+          let max = { x: brushSelection[1][0], y: brushSelection[1][1] };
+          let x = xScale(commit.date);
+          let y = yScale(commit.hourFrac);
+
+          return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
+        });
     updateSelection();
     updateSelectionCount();
     updateLanguageBreakdown();
   }
 
   function isCommitSelected(commit) {
-    if (!brushSelection) {
-      return false;
-    }
-    // TODO: return true if commit is within brushSelection
-    // and false if not
-    const min = { x: brushSelection[0][0], y: brushSelection[0][1] }; 
-    const max = { x: brushSelection[1][0], y: brushSelection[1][1] }; 
-    const x = xScale(commit.date); 
-    const y = yScale(commit.hourFrac); 
-    return x >= min.x && x <= max.x && y >= min.y && y <= max.y;
-
+    return selectedCommits.includes(commit);
   }
 
   function updateSelection() {
@@ -260,10 +264,6 @@ function updateTooltipContent(commit) {
   }
 
   function updateSelectionCount() {
-    const selectedCommits = brushSelection
-      ? commits.filter(isCommitSelected)
-      : [];
-  
     const countElement = document.getElementById('selection-count');
     countElement.textContent = `${
       selectedCommits.length || 'No'
